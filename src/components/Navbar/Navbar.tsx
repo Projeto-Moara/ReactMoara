@@ -13,7 +13,9 @@ function Navbar() {
             <div className='text-2xl font-bold uppercase'>Moara</div>
 
             <div className='flex gap-4'>
-          
+               <div className='hover:underline'>
+                <Link to='/home' className='hover:underline'>Home</Link>
+              </div>
               <div className='hover:underline'>Postagens</div>
               <div className='hover:underline'>Temas</div>
               <div className='hover:underline'>Cadastrar tema</div>
