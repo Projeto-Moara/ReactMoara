@@ -25,8 +25,9 @@ function Navbar() {
             <div className='text-2xl font-bold uppercase'>Moara</div>
 
             <div className='flex gap-4'>
+
               <div className='hover:underline'>
-              <Link to='/home' className='hover:underline'>Home</Link>
+                <Link to='/home' className='hover:underline'>Home</Link>
               </div>
 
               <div className='hover:underline'>Postagens</div>
@@ -42,7 +43,7 @@ function Navbar() {
               <div className='hover:underline'>Perfil</div>
 
               <div className='hover:underline'>
-              <Link to='' onClick={logout} className='hover:underline m-4'>Sair</Link>
+                <Link to='' onClick={logout} className='hover:underline m-4'>Sair</Link>
               </div>
              
             </div>
