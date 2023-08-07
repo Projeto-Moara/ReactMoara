@@ -32,9 +32,9 @@ function Navbar() {
 
               <div className='hover:underline'>Postagens</div>
 
-              <div className='hover:underline'>Temas</div>
+              <Link to='/temas' className='hover:underline'>Temas</Link>
               
-              <div className='hover:underline'>Cadastrar tema</div>
+              <Link to='/cadastroTema' className='hover:underline'>Cadastrar tema</Link>
 
               <div className='hover:underline'>
                 <Link to='/sobre' className='hover:underline'>Sobre</Link>

@@ -2,6 +2,7 @@ import React from 'react';
 import homeLogo from '../../assets/logo_animation.svg'
 import './Home.css';
 
+
 function Home() {
     return (
         <>
