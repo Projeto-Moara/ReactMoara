@@ -1,8 +1,27 @@
-.fundoLogin {
-  background-image: url(../../assets/login.jpg);
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  width: 100%;
+.login-background {
+  background: url( '../../assets/florest\ icon\ 0.png');
   background-size: cover;
-  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  padding: 20px;
+  width: 60%;
+  height: 80%;
+  color: rgb(255, 255, 255);
+}
+
+.form {
+  background-color: rgb(108, 182, 211);
+  background-image: linear-gradient( to right, rgb(0, 0, 56), transparent, rgb(0, 0, 56) ); 
+  border-radius: 30px;
+  font-size: 17px;
 }
