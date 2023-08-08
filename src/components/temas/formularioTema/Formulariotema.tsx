@@ -104,6 +104,15 @@ function FormularioTema() {
 
       <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovoTema}>
         <div className="flex flex-col gap-2">
+          <label htmlFor="nome">Nome do tema</label>
+          <input
+            type="text"
+            placeholder="Nome"
+            name='nome'
+            className="border-2 border-slate-700 rounded p-2"
+            value={tema.nome}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+          />
           <label htmlFor="descricao">Descrição do tema</label>
           <input
             type="text"
