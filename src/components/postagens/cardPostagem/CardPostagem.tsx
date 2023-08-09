@@ -1,12 +1,34 @@
-import React from 'react'
+import React, { ChangeEvent, FormEvent, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Postagem from '../../../models/Postagem'
+import Comentarios from '../../comentarios/Comentarios'
 
 interface CardPostagemProps {
   post: Postagem
+  curtir: (id: number) => void
 }
 
-function CardPostagem({post}: CardPostagemProps) {
+function CardPostagem({post, curtir}: CardPostagemProps) {
+   // Inicia o campo de Comentarios com um Comentário Generico
+   const [comentarios, setComentarios] = useState([
+    'Post muito bacana, hein?! 👏👏'
+])
+
+// State que usaremos para pegar o texto dos novos Comentários
+const [novoComentarioTexto, setNovoComentarioTexto] = useState('')
+
+// Função que vai pegar os novos comentários digitados e adiciona ao State
+function criarNovoComentario(event: FormEvent) {
+    event.preventDefault()
+    setComentarios([...comentarios, novoComentarioTexto])
+    setNovoComentarioTexto('')
+}
+
+// Função que pega o texto do novo comentário
+function atualizarNovoComentario(event: ChangeEvent<HTMLTextAreaElement>) {
+    setNovoComentarioTexto(event.target.value)
+}
+
   return (
     <div className='border-slate-900 border flex flex-col rounded overflow-hidden justify-between'>
       <div>
@@ -32,6 +54,31 @@ function CardPostagem({post}: CardPostagemProps) {
           <button>Deletar</button>
         </Link>
       </div>
+        <button onClick={() => { curtir(post.id) }}>curtir</button>
+        <p>{ post.curtir }</p>
+       
+
+      <form onSubmit={criarNovoComentario} className='flex flex-col'>
+                <strong>Deixe seu feedback</strong>
+                <textarea
+                    name='comment'
+                    placeholder='Deixe seu comentário'
+                    value={novoComentarioTexto}
+                    onChange={atualizarNovoComentario}
+                    required
+                />
+                <footer>
+                    <button type="submit">Publicar</button>
+                </footer>
+            </form>
+
+            <div>
+                {comentarios.map(comentario => {
+                    return (
+                        <Comentarios conteudo={comentario} />
+                    )
+                })}
+            </div>
     </div>
   )
 }

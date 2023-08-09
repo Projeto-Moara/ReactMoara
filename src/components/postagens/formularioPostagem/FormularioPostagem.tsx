@@ -28,6 +28,7 @@ function FormularioPostagem() {
     titulo: '',
     texto: '',
     data: '',
+    curtir:0,
     tema: null,
     usuario: null,
   });

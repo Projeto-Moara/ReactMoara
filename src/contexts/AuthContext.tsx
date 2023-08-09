@@ -34,12 +34,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
         setIsLoading(true)
         try {
             await login(`/usuarios/logar`, userLogin, setUsuario)
-            toastAlerta('Sucesso ao logar', 'Sucesso');
-            setIsLoading(false)
+            toastAlerta('Sucesso ao logar', 'sucesso');
+            setIsLoading(true)
 
         } catch (error) {
             console.log(error)
-            toastAlerta('Você precisa estar logado', 'info');
+            toastAlerta('Você precisa estar logado', 'erro');
             setIsLoading(false)
         }
     }
