@@ -3,14 +3,13 @@ import { Dna } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Postagem from '../../../models/Postagem';
-import { buscar } from '../../../services/Service';
+import { atualizar, buscar } from '../../../services/Service';
 import CardPostagem from '../cardPostagem/CardPostagem';
 import { toastAlerta } from '../../../util/toastAlerta';
 
-
-
 function ListaPostagens() {
   const [postagens, setPostagens] = useState<Postagem[]>([]);
+  const [postagem, setPostagem] = useState<Postagem>({} as Postagem)
 
   let navigate = useNavigate();
 
@@ -39,6 +38,15 @@ function ListaPostagens() {
     }
   }
 
+  async function curtir(id: number) {
+    await atualizar(`/postagens/curtir/${id}`, postagem, setPostagem, {
+      headers: {
+        Authorization: token,
+      },
+    });
+    await buscarPostagens()
+  }
+
   useEffect(() => {
     buscarPostagens();
   }, [postagens.length]);
@@ -57,7 +65,7 @@ function ListaPostagens() {
       )}
       <div className='container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {postagens.map((postagem) => (
-          <CardPostagem key={postagem.id} post={postagem} />
+          <CardPostagem key={postagem.id} post={postagem} curtir={curtir} />
         ))}
       </div>
     </>
