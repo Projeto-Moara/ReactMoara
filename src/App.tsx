@@ -17,6 +17,7 @@ import ListaPostagens from './components/postagens/listaPostagens/ListaPostagens
 import FormularioPostagem from './components/postagens/formularioPostagem/FormularioPostagem';
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 import Perfil from './pages/perfil/Perfil';
+import Sobre from './pages/Sobre/Sobre';
 
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
@@ -34,6 +35,7 @@ function App() {
               <Route path="/" element={<Login />} />
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />
+              <Route path="/sobre" element={<Sobre />} />
               <Route path="/home" element={<Home />} />
               <Route path="/temas" element={<ListaTemas />} />
               <Route path="/cadastroTema" element={<FormularioTema />} />

@@ -65,16 +65,17 @@ function DeletarTema() {
     }
     return (
         <div className='container w-1/3 mx-auto'>
-            <h1 className='text-4xl text-center my-4'>Deletar tema</h1>
 
-            <p className='text-center font-semibold mb-4'>Você tem certeza de que deseja apagar o tema a seguir?</p>
+            <h1 className='text-5xl text-bold text-center my-4 text-[#02123E]'>Deletar tema</h1>
+
+            <p className='text-center font-semibold mb-4 text-[#02123E]'>Você tem certeza de que deseja apagar o tema a seguir?</p>
 
             <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
-                <header className='py-2 px-6 bg-indigo-600 text-white font-bold text-2xl'>Tema</header>
+                <header className='py-2 px-6 bg-gradient-to-r from-[#02123E] via-[#06315E] to-[#02123E]  text-white font-bold text-2xl'>Tema</header>
                 <p className='p-8 text-3xl bg-slate-200 h-full'>{tema.descricao}</p>
                 <div className="flex">
-                    <button className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2' onClick={retornar}>Não</button>
-                    <button className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-600 flex items-center justify-center' onClick={deletarTema}>
+                    <button className='text-slate-100  bg-gradient-to-r from-green-500 to-blue-600   hover:from-blue-400 hover:to-green-400  w-full py-2' onClick={retornar}>Não</button>
+                    <button className='w-full text-slate-100 bg-gradient-to-r from-[#FF7A00] to-[#ff1f1f] hover:from-[#FF7A00] hover:to-[#ffc41f] flex items-center justify-center' onClick={deletarTema}>
                         Sim
                     </button>
                 </div>
