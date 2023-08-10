@@ -70,60 +70,59 @@ function Cadastro() {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
-        <div className="fundoCadastro hidden lg:block"></div>
-        <form className='flex justify-center items-center flex-col w-2/3 gap-3' onSubmit={cadastrarNovoUsuario}>
-          <h2 className='text-slate-900 text-5xl'>Cadastrar</h2>
+      <div className="grid h-screen place-items-center fundoLogin">
+        <form className='max-w-[700px] mx-auto flex-col gap-4 form-container w-1/1 bg-gradient-to-r from-[#02123E] via-[#06315E] to-[#02123E] rounded-lg drop-shadow-xl' onSubmit={cadastrarNovoUsuario}>
+          <h2 className='text-[#FF7A00] text-5xl '>Cadastrar</h2>
           <div className="flex flex-col w-full">
-            <label htmlFor="nome">Nome</label>
+            <label htmlFor="nome" className="text-white">Nome</label>
             <input
               type="text"
               id="nome"
               name="nome"
               placeholder="Nome"
               className="border-2 border-slate-700 rounded p-2"
-              value={usuario.nome} 
+              value={usuario.nome}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="usuario">Usuario</label>
+            <label htmlFor="usuario" className="text-white">Usuario</label>
             <input
               type="text"
               id="usuario"
               name="usuario"
               placeholder="Usuario"
               className="border-2 border-slate-700 rounded p-2"
-              value={usuario.usuario} 
+              value={usuario.usuario}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="foto">Foto</label>
+            <label htmlFor="foto" className="text-white">Foto</label>
             <input
               type="text"
               id="foto"
               name="foto"
               placeholder="Foto"
               className="border-2 border-slate-700 rounded p-2"
-              value={usuario.foto} 
+              value={usuario.foto}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="senha">Senha</label>
+            <label htmlFor="senha" className="text-white">Senha</label>
             <input
               type="password"
               id="senha"
               name="senha"
               placeholder="Senha"
               className="border-2 border-slate-700 rounded p-2"
-              value={usuario.senha} 
+              value={usuario.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="confirmarSenha">Confirmar Senha</label>
+            <label htmlFor="confirmarSenha" className="text-white">Confirmar Senha</label>
             <input
               type="password"
               id="confirmarSenha"
@@ -135,10 +134,10 @@ function Cadastro() {
             />
           </div>
           <div className="flex justify-around w-full gap-8">
-            <button className='rounded text-white bg-red-400 hover:bg-red-700 w-1/2 py-2' onClick={back}>
+            <button className='rounded bg-gradient-to-r from-[#FF7A00] to-[#ff1f1f] hover:from-[#FF7A00] hover:to-[#ffc41f]  text-white w-1/2 py-2 flex justify-center' onClick={back}>
               Cancelar
             </button>
-            <button className='rounded text-white bg-indigo-400 hover:bg-indigo-900 w-1/2 py-2' type='submit'>
+            <button className='rounded bg-gradient-to-r from-green-500 to-blue-600   hover:from-blue-400 hover:to-green-400  text-white w-1/2 py-2 flex justify-center' type='submit'>
               Cadastrar
             </button>
           </div>

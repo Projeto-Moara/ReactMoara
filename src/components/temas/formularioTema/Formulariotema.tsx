@@ -4,6 +4,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import Tema from '../../../models/Tema';
 import { atualizar, buscar, cadastrar } from '../../../services/Service';
 import { toastAlerta } from '../../../util/toastAlerta';
+import '../../../pages/login/Login.css';
 
 function FormularioTema() {
   const [tema, setTema] = useState<Tema>({} as Tema);
@@ -97,39 +98,41 @@ function FormularioTema() {
   }, [token]);
 
   return (
-    <div className="container flex flex-col items-center justify-center mx-auto">
-      <h1 className="text-4xl text-center my-8">
-        {id === undefined ? 'Cadastre um novo tema' : 'Editar tema'}
-      </h1>
+    <div className='grid h-screen place-items-center w-1/1 fundoLogin'>
+      <div className="max-w-[500px] mx-auto flex-col gap-4 form-container h-[500px] bg-gradient-to-r from-[#02123E] via-[#06315E] to-[#02123E] rounded-lg drop-shadow-xl">
+        <h1 className="text-center my-8 text-[#FF7A00] text-5xl">
+          {id === undefined ? 'Cadastre um novo tema' : 'Editar tema'}
+        </h1>
 
-      <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovoTema}>
-        <div className="flex flex-col gap-2">
-          <label htmlFor="nome">Nome do tema</label>
-          <input
-            type="text"
-            placeholder="Nome"
-            name='nome'
-            className="border-2 border-slate-700 rounded p-2"
-            value={tema.nome}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-          />
-          <label htmlFor="descricao">Descrição do tema</label>
-          <input
-            type="text"
-            placeholder="Descrição"
-            name='descricao'
-            className="border-2 border-slate-700 rounded p-2"
-            value={tema.descricao}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-          />
-        </div>
-        <button
-          className="rounded text-slate-100 bg-indigo-400 hover:bg-indigo-800 w-1/2 py-2 mx-auto block"
-          type="submit"
-        >
-          {id === undefined ? 'Cadastrar' : 'Editar'}
-        </button>
-      </form>
+        <form className=" flex flex-col gap-4 w-[400px] " onSubmit={gerarNovoTema}>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="nome" className="text-white">Nome do tema</label>
+            <input
+              type="text"
+              placeholder="Nome"
+              name='nome'
+              className="border-2 border-slate-700 rounded p-2"
+              value={tema.nome}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+            />
+            <label htmlFor="descricao" className="text-white">Descrição do tema</label>
+            <input
+              type="text"
+              placeholder="Descrição"
+              name='descricao'
+              className="border-2 border-slate-700 rounded p-2"
+              value={tema.descricao}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+            />
+          </div>
+          <button
+            className="rounded text-slate-100 bg-gradient-to-r from-green-500 to-blue-600 hover:from-[#FF7A00] hover:to-[#ff1f1f]  w-1/2 py-2 mx-auto block"
+            type="submit"
+          >
+            {id === undefined ? 'Cadastrar' : 'Editar'}
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

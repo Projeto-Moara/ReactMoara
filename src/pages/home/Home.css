@@ -1,11 +1,22 @@
-.titulo{
+.titulo {
     color: blue;
     text-align: center;
 }
 
-.img{
+.img {
     width: 500px;
     height: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+.fundoHome {
+    background-image: url(../../assets/moaraLogo2.jpg);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
     display: block;
     margin: 0 auto;
 }

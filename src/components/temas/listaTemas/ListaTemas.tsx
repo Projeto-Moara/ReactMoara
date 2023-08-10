@@ -21,7 +21,7 @@ function ListaTemas() {
         headers: { Authorization: token },
       });
     } catch (error: any) {
-      if(error.toString().includes('403')) {
+      if (error.toString().includes('403')) {
         toastAlerta('O token expirou, favor logar novamente', 'info')
         handleLogout()
       }
@@ -38,6 +38,7 @@ function ListaTemas() {
   useEffect(() => {
     buscarTemas();
   }, [temas.length]);
+  
   return (
     <>
       {temas.length === 0 && (
