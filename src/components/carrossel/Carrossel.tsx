@@ -12,10 +12,12 @@ import "./Carrossel.css";
 // Importando Modulos do Carrossel
 import { Navigation, Pagination } from 'swiper/modules';
 
+import img from  '../../assets/circulo_moara.png';
+
 function Carrossel() {
 
     var items = [
-        { img: "https://github.com/Projeto-Moara/ReactMoara/blob/main/src/assets/moaraLogo2.jpg" },
+        { img: img },
         { img: "https://cdn1.dotesports.com/wp-content/uploads/sites/3/2021/09/26143317/LUkXhMag.jpeg" },
     ]
 

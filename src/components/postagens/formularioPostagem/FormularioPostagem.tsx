@@ -5,7 +5,6 @@ import Postagem from '../../../models/Postagem';
 import Tema from '../../../models/Tema';
 import { buscar, atualizar, cadastrar } from '../../../services/Service';
 import { toastAlerta } from '../../../util/toastAlerta';
-import '../../../pages/login/Login.css'
 
 function FormularioPostagem() {
   let navigate = useNavigate();
@@ -139,8 +138,8 @@ function FormularioPostagem() {
   const carregandoTema = tema.descricao === '';
 
   return (
-    <div className='grid h-screen place-items-center w-1/1 fundoLogin'>
-      <div className="max-w-[500px] mx-auto flex-col gap-4 form-container h-[500px] bg-gradient-to-r from-[#02123E] via-[#06315E] to-[#02123E] rounded-lg drop-shadow-xl">
+  
+      <div className="container flex flex-col mx-auto items-center rounded py-4 bg-gradient-to-r from-[#02123E] via-[#06315E] to-[#02123E]  ">
         <h1 className="text-4xl text-center my-8 text-[#FF7A00]">{id !== undefined ? 'Editar Postagem' : 'Cadastrar Postagem'}</h1>
 
         <form onSubmit={gerarNovaPostagem} className="flex flex-col w-4/4 gap-4">
@@ -184,7 +183,6 @@ function FormularioPostagem() {
           </button>
         </form>
       </div>
-    </div>
   );
 }
 
