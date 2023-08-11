@@ -1,8 +1,7 @@
-import React, { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Postagem from '../../../models/Postagem';
 import Comentarios from '../../comentarios/Comentarios';
-import LikeLogo from '../../../assets/like.svg.svg';
 interface CardPostagemProps {
   post: Postagem
   curtir: (id: number) => void
@@ -38,14 +37,18 @@ function CardPostagem({ post, curtir }: CardPostagemProps) {
         </div>
         <div className='p-4 '>
           <h4 className='text-lg text-[#FF7A00] font-semibold uppercase'>{post.titulo}</h4>
-          <p>{post.texto}</p>
           <p>Tema: {post.tema?.descricao}</p>
+          <br />
+          <p>{post.texto}</p>
+          <br />
+          <img src={post.foto} alt=''></img>
           <p>Data: {new Intl.DateTimeFormat(undefined, {
             dateStyle: 'full',
             timeStyle: 'medium',
           }).format(new Date(post.data))}</p>
         </div>
       </div>
+
       <div className="flex">
         <Link to={`/editarPostagem/${post.id}`} className='w-full text-slate-100 bg-gradient-to-r from-green-500 to-blue-600 hover:from-blue-400 hover:to-green-400 flex items-center justify-center py-2'>
           <button>Editar</button>
@@ -57,33 +60,38 @@ function CardPostagem({ post, curtir }: CardPostagemProps) {
 
       <div className='container flex flex-col items-center py-4 text-bold text-red-700'>
         <div className='bg-red-700 hover:bg-orange-400 text-white font-bold py-0 px-6 rounded outline'>
-          <button onClick={() => { curtir(post.id) }}> ♥️ </button>
+          <button onClick={() => { curtir(post.id) }}> ♥️ {post.curtir}</button>
         </div>
-        <p>{post.curtir}</p>
       </div>
 
-      <form onSubmit={criarNovoComentario} className='flex flex-col text-center'>
-        <strong className=''>Deixe seu feedback</strong>
-        <textarea
-          className='line-clamp-3 text-center'
-          name='comment'
-          placeholder='Deixe seu comentário'
-          value={novoComentarioTexto}
-          onChange={atualizarNovoComentario}
-          required
-        />
-        <footer>
-          <button type="submit" className='bg-gradient-to-r from-green-500 to-blue-600 hover:from-blue-400 hover:to-green-400 text-white font-bold py-0 px-6 rounded outline'>Publicar</button>
-        </footer>
-      </form>
 
+      <strong className='text-center'>Comentários</strong>
       <div className='flex flex-col text-center'>
         {comentarios.map(comentario => {
           return (
             <Comentarios conteudo={comentario} />
           )
         })}
+        <br />
       </div>
+
+      <form onSubmit={criarNovoComentario} className='flex flex-col'>
+        <strong className='text-center'>Deixe seu feedback também:</strong>
+        <textarea
+          className='line-clamp-3'
+          name='comment'
+          placeholder='Deixe seu comentário'
+          value={novoComentarioTexto}
+          onChange={atualizarNovoComentario}
+          required
+        />
+        <footer className='text-center'>
+          <button type="submit" className='bg-gradient-to-r from-green-500 to-blue-600 hover:from-blue-400 hover:to-green-400 text-white font-bold py-0 px-6 rounded outline'>Publicar</button>
+        </footer>
+        <br />
+      </form>
+
+
     </div>
   )
 }

@@ -12,7 +12,7 @@ import "./Carrossel.css";
 // Importando Modulos do Carrossel
 import { Navigation, Pagination } from 'swiper/modules';
 
-import img from  '../../assets/circulo_moara.png';
+import img from '../../assets/circulo_moara.png';
 
 function Carrossel() {
 

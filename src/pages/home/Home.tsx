@@ -2,7 +2,7 @@ import homeLogo from '../../assets/circulo_moara.png';
 import './Home.css';
 import ListaPostagens from '../../components/postagens/listaPostagens/ListaPostagens';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -19,9 +19,9 @@ function Home() {
           </div>
 
           <div className="flex py-8 bg-repeat">
-          <img src={homeLogo} alt="Logo Moara" className=' min-w-full h-[65vh]' />
+            <img src={homeLogo} alt="Logo Moara" className=' min-w-full h-[65vh]' />
           </div>
-          
+
         </div>
       </div>
       <ListaPostagens />

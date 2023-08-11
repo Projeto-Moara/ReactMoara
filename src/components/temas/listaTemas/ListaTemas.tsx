@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Dna } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
@@ -38,7 +38,7 @@ function ListaTemas() {
   useEffect(() => {
     buscarTemas();
   }, [temas.length]);
-  
+
   return (
     <>
       {temas.length === 0 && (
