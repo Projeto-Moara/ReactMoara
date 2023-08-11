@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
 import { toastAlerta } from '../../util/toastAlerta';
-import Moara from '../../assets/circulo_moara.png';
+import Moara from '../../assets/moara_logo.png';
 
 
 function Navbar() {

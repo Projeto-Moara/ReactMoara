@@ -78,7 +78,7 @@ function CardPostagem({ post, curtir }: CardPostagemProps) {
       <form onSubmit={criarNovoComentario} className='flex flex-col'>
         <strong className='text-center'>Deixe seu feedback também:</strong>
         <textarea
-          className='line-clamp-3'
+          className='line-clamp-3 text-center'
           name='comment'
           placeholder='Deixe seu comentário'
           value={novoComentarioTexto}

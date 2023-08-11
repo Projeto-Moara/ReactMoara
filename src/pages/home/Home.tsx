@@ -1,4 +1,4 @@
-import homeLogo from '../../assets/circulo_moara.png';
+import homeLogo from '../../assets/moaraLogo2.jpg';
 import './Home.css';
 import ListaPostagens from '../../components/postagens/listaPostagens/ListaPostagens';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
