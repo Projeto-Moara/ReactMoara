@@ -51,7 +51,7 @@ function CardPostagem({ post, curtir }: CardPostagemProps) {
       </div>
 
       <figure>
-        <img src={post.foto} alt='card imagem' className="w-[400px] h-[400px] justify-center items-center"></img>
+        <img src={post.foto} alt='card imagem' className="w-[800px] h-[400px] justify-center items-center"></img>
       </figure>
 
       <div className="p-6 h-50">
