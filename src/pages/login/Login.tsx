@@ -39,7 +39,7 @@ function Login() {
   return (
     <>
       <div className="grid place-items-center fundoLoginVerde fonte">
-        <form className="w-[27%] mx-auto flex-col gap-4 form-container displayCounteiner bg-[#121D13]" onSubmit={login}>
+        <form className="max-w-[400px] min-w-[300px] mx-auto flex-col gap-4 form-container displayCounteiner bg-[#121D13]" onSubmit={login}>
           <img src={moaraLogin} alt="Logo Moara" />
           <div className="flex flex-col w-full bg-[#121D13]">
             <label htmlFor="usuario" className="ml-[20px] text-white">Usuário</label>
