@@ -3,7 +3,10 @@ import { useNavigate } from 'react-router-dom'
 import Usuario from '../../models/Usuario'
 import { cadastrarUsuario } from '../../services/Service'
 import './Cadastro.css'
+import '../../global/global.css'
+import cadastro from '../../assets/Cadastrar.png'
 import { toastAlerta } from '../../util/toastAlerta'
+import voltarIMG from '../../assets/flecha 1.png'
 
 function Cadastro() {
 
@@ -70,76 +73,82 @@ function Cadastro() {
 
   return (
     <>
-      <div className="grid h-screen place-items-center fundoLogin">
-        <form className='max-w-[700px] mx-auto flex-col gap-4 form-container w-1/1 bg-gradient-to-r from-[#02123E] via-[#06315E] to-[#02123E] rounded-lg drop-shadow-xl' onSubmit={cadastrarNovoUsuario}>
-          <h2 className='text-[#FF7A00] text-5xl '>Cadastrar</h2>
+      <div className="grid place-items-center fundoVerde fonte">
+        <form className="md:h-[55vh] md:w-[50vw] lg:h-[95vh] lg:w-[40vw] flex-col gap-4 form-container displayCounteiner bg-[#121D13]" onSubmit={cadastrarNovoUsuario}>
+          <img src={cadastro} alt="Tipografia Cadastrar" />
           <div className="flex flex-col w-full">
-            <label htmlFor="nome" className="text-white">Nome</label>
+            <label htmlFor="nome" className="ml-[20px] text-white">Nome</label>
             <input
               type="text"
               id="nome"
               name="nome"
               placeholder="Nome"
-              className="border-2 border-slate-700 rounded p-2"
+              className="w-full p-[8px] rounded-[40px] bg-[#121D13] border focus:border-white focus:bg-[#121D13]focus:outline-none text-white pl-[20px]"
               value={usuario.nome}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="usuario" className="text-white">Usuario</label>
+            <label htmlFor="usuario" className="ml-[20px] text-white">Usuario</label>
             <input
               type="text"
               id="usuario"
               name="usuario"
               placeholder="Usuario"
-              className="border-2 border-slate-700 rounded p-2"
+              className="w-full p-[8px] rounded-[40px] bg-[#121D13] border focus:border-white focus:bg-[#121D13]focus:outline-none text-white pl-[20px]"
               value={usuario.usuario}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="foto" className="text-white">Foto</label>
+            <label htmlFor="foto" className="ml-[20px] text-white">Foto</label>
             <input
               type="text"
               id="foto"
               name="foto"
               placeholder="Foto"
-              className="border-2 border-slate-700 rounded p-2"
+              className="w-full p-[8px] rounded-[40px] bg-[#121D13] border focus:border-white focus:bg-[#121D13]focus:outline-none text-white pl-[20px]"
               value={usuario.foto}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="senha" className="text-white">Senha</label>
+            <label htmlFor="senha" className="ml-[20px] text-white">Senha</label>
             <input
               type="password"
               id="senha"
               name="senha"
               placeholder="Senha"
-              className="border-2 border-slate-700 rounded p-2"
+              className="w-full p-[8px] rounded-[40px] bg-[#121D13] border focus:border-white focus:bg-[#121D13]focus:outline-none text-white pl-[20px]"
               value={usuario.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="confirmarSenha" className="text-white">Confirmar Senha</label>
+            <label htmlFor="confirmarSenha" className="ml-[20px] text-white">Confirmar Senha</label>
             <input
               type="password"
               id="confirmarSenha"
               name="confirmarSenha"
               placeholder="Confirmar Senha"
-              className="border-2 border-slate-700 rounded p-2"
+              className="w-full p-[8px] rounded-[40px] bg-[#121D13] border focus:border-white focus:bg-[#121D13]focus:outline-none text-white pl-[20px]"
               value={confirmaSenha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
             />
           </div>
-          <div className="flex justify-around w-full gap-8">
-            <button className='rounded bg-gradient-to-r from-[#FF7A00] to-[#ff1f1f] hover:from-[#FF7A00] hover:to-[#ffc41f]  text-white w-1/2 py-2 flex justify-center' onClick={back}>
-              Cancelar
-            </button>
-            <button className='rounded bg-gradient-to-r from-green-500 to-blue-600   hover:from-blue-400 hover:to-green-400  text-white w-1/2 py-2 flex justify-center' type='submit'>
+          <div className="flex-colun">
+            <div className='flex items-center'>
+              <button className="rounded-[50px] fonteSize px-[30px] bg-[#213423] text-white p-[10px] flex justify-center displayCounteiner" type='submit'>
               Cadastrar
-            </button>
+             </button>
+            </div>
+            <div className='flex justify-center cursor-pointer m-[10%]' onClick={back}>
+              <img src={voltarIMG} alt="Icone de voltar" className=' w-[25%] h-[25%]' />
+              <button className='text-[#72A9E3] ml-[5%] fonteSize'>
+              Voltar
+              </button>
+            </div>
+      
           </div>
         </form>
       </div>
