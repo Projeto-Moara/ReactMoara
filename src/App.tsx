@@ -21,7 +21,7 @@ import { ToastContainer } from 'react-toastify';
 
 function App() {
 
-  return (
+  return ( 
     <>
       <AuthProvider>
         <ToastContainer />

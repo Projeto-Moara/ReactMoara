@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
+
+
 .fundoLogin {
   background-image: url(../../assets/florest.png);
   background-repeat: no-repeat;
@@ -9,13 +12,38 @@
   margin: 0 auto;
 }
 
+.fundoLoginVerde{
+  background-image: url(../../assets/Fundo.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+}
+
 .form-container {
   display:flex;
   justify-content: center;
   align-items: center;
   padding: 30px;
-  width: 60%;
-  height: 80%;
   margin: 0 auto;
+  width: 380px;
+  height: 430px;
 }
 
+.displayCounteiner{
+  border-radius: 0 10% 10% 10%;
+  box-shadow: 10px 0 10px 0 #000 ;
+  
+}
+
+.fonte{
+  font-family: 'Bakbak One', cursive;
+}
+
+.fonteSize{
+  font-size: 20px;
+}
+
+p::selection {
+  color: lightblue;
+  background-color: black;
+}

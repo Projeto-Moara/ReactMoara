@@ -37,34 +37,34 @@ function Login() {
 
   return (
     <>
-      <div className="grid h-screen place-items-center fundoLogin">
-        <form className="max-w-[400px] mx-auto flex-col gap-4 form-container h-1/2 bg-gradient-to-r from-[#02123E] via-[#06315E] to-[#02123E] rounded-lg drop-shadow-xl" onSubmit={login}>
-          <h2 className="text-[#FF7A00] text-5xl">Entrar</h2>
-          <div className="flex flex-col w-full">
-            <label htmlFor="usuario" className="text-white">Usuário</label>
+      <div className="grid place-items-center fundoLoginVerde fonte">
+        <form className="w-[27%] mx-auto flex-col gap-4 form-container displayCounteiner bg-[#121D13]" onSubmit={login}>
+          <img src="src\assets\MoaraLogin.png" alt="Logo Moara" />
+          <div className="flex flex-col w-full bg-[#121D13]">
+            <label htmlFor="usuario" className="ml-[20px] text-white">Usuário</label>
             <input
               type="text"
               id="usuario"
               name="usuario"
               placeholder="Usuario"
-              className="border-2 border-slate-800 rounded p-2"
+              className="w-full p-[8px] rounded-[40px] bg-[#121D13] border focus:border-white focus:bg-[#121D13]focus:outline-none text-white pl-[20px]"
               value={usuarioLogin.usuario}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="senha" className="text-white">Senha</label>
+            <label htmlFor="senha" className="text-white ml-[20px]">Senha</label>
             <input
               type="password"
               id="senha"
               name="senha"
               placeholder="Senha"
-              className="border-2 border-slate-700 rounded p-2"
+              className="w-full p-[8px] rounded-[40px] bg-[#121D13] border focus:border-white focus:bg-[#121D13]focus:outline-none text-white pl-[20px]"
               value={usuarioLogin.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
-          <button type="submit" className="rounded bg-gradient-to-r from-green-500 to-blue-600 hover:from-[#FF7A00] hover:to-[#ffc41f]  text-white w-1/2 py-2 flex justify-center">
+          <button type="submit" className="rounded-[50px] fonteSize px-[30px] bg-[#213423] text-white p-[10px] flex justify-center displayCounteiner">
             {isLoading ? (
               <RotatingLines
                 strokeColor="white"
@@ -77,15 +77,9 @@ function Login() {
               <span>Entrar</span>
             )}
           </button>
-
-          <hr className="border-slate-800 w-full" />
-
-          <p className="text-white font-bold">
-            Ainda não tem uma conta?{' '}
-            <Link to="/cadastro" className="text-[#FF7A00]	 hover:underline">
+          <Link to="/cadastro" className="text-[#72A9E3] fonteSize hover:underline">
               Cadastre-se
-            </Link>
-          </p>
+          </Link>
         </form>
       </div>
     </>
