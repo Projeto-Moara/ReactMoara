@@ -8,16 +8,15 @@ import Bate_papo from '../../components/chat/Bate_papo';
 
 function Home() {
   return (
-    <div>
-      <div className="fundoVerde-2">
-        <div className=''>
-          <Navbar/>
+<div className="fundoVerde-2 fonte">
+            <div className="flex grid-cols-3 gap-4 m-auto">
+                <div className="grid-cols-3 lg:col-span-3"><Navbar /></div>
+                <div className="grid-cols-3 lg:col-span-3"><ListaPostagens /></div>
+                <div className="grid-cols-3 lg:col-span-3"><Bate_papo /></div>
+            </div>
+            <Footer/>
         </div>
-        <div className=''>
-          <Bate_papo />
-        </div>
-      </div>
-    </div>
+        
   );
 }
 

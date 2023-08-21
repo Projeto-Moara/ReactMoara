@@ -29,12 +29,12 @@ function CardPostagem({ post, curtir }: CardPostagemProps) {
 
   return (
 
-    <div className='grid lg:col-span-2 justify-center relative overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200 border-[#02123E]'>
+    <div className='grid grid-col-2 justify-center relative overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200 border-[#02123E]'>
 
 
 
       <div className="p-6 h-100">
-        <header className="flex justify-center gap-4">
+        <header className="flex gap-4">
           <a href="#" className="relative inline-flex items-center justify-center w-12 h-12 text-white rounded-full">
             <img src={post.usuario?.foto} alt="user name" title="user name" width="50" height="50" className="max-w-full max-h-full rounded-full" />
           </a>
@@ -51,17 +51,16 @@ function CardPostagem({ post, curtir }: CardPostagemProps) {
       </div>
 
       <figure>
-        <img src={post.foto} alt='card imagem' className="w-[800px] h-[400px] justify-center items-center"></img>
+        <img src={post.foto} alt='card imagem' className="flex justify-center w-[700px] h-[400px] "></img>
       </figure>
 
       <div className="p-6 h-50">
         <p>Título: {post.titulo}</p>
         <p>Tema: {post.tema?.descricao}</p>
       </div>
-      <div className="p-6">
+      <div className="p-2">
         <p>{post.texto}</p>
       </div>
-
 
       <div className="flex justify-center gap-2 p-2 pt-0">
         <div className="flex">
@@ -113,33 +112,10 @@ function CardPostagem({ post, curtir }: CardPostagemProps) {
               })}
               <br />
             </div>
-
-            <form onSubmit={criarNovoComentario} className='flex flex-col p-12'>
-              <strong className='text-center'>Deixe seu feedback também:</strong>
-              <textarea
-                className='line-clamp-3 text-center'
-                name='comment'
-                placeholder='Deixe seu comentário'
-                value={novoComentarioTexto}
-                onChange={atualizarNovoComentario}
-                required
-              />
-              <footer className='text-center'>
-                <button type="submit" className='bg-gradient-to-r from-green-500 to-blue-600 hover:from-blue-400 hover:to-green-400 text-white font-bold py-0 px-6 rounded outline'>Publicar</button>
-              </footer>
-              <br />
-            </form>
           </div>
         </header>
       </div>
-
-
-
-
-
     </div>
-
-
 
   )
 }

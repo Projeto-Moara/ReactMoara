@@ -9,7 +9,7 @@ import tipografia from '../../assets/tipografia_bate-papo.png';
 
 function Bate_papo() {
     return (
-        <div className='flex flex-col w-[20vw] displayCounteiner p-[1%] bg-[#121D13]'>
+        <div className='flex flex-col mt-4 mr-6 w-[20vw] displayCounteiner p-[1%] bg-[#121D13]'>
             <div className='flex justify-center'>
                 <img className='w-[90%]' src={tipografia} alt="Tipografia Bate-papo" />
             </div>
@@ -42,6 +42,7 @@ function Bate_papo() {
                     <img className='flex w-[20%] h-[20%]' src={mulher_cabelo_curto} alt="Foto de perfil do Usuario" />
                     <p className='text-white ml-[5%] fonteSize'>Usuário</p>
                 </div>
+                
             </div>
         </div>
     );
