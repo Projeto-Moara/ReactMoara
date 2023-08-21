@@ -9,6 +9,11 @@
     box-shadow: 10px 0 10px 0 #000 ;
 }
 
+.displayCounteiner-2{
+    border-radius: 0 13% 13% 13%;
+    box-shadow: 10px 0 10px 0 #000 ;
+}
+
 .fonte{
     font-family: 'Bakbak One', cursive;
 }
@@ -21,5 +26,11 @@
     background-image: url(../assets/Fundo.jpg);
     width: 100vw;
     height: 100vh;
+    background-size: cover;
+}
+.fundoVerde-2{
+    background-image: url(../assets/Fundo.jpg);
+    width: 100vw;
+    height: 150vh;
     background-size: cover;
 }

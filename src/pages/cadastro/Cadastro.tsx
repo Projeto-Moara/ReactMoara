@@ -74,7 +74,7 @@ function Cadastro() {
   return (
     <>
       <div className="grid place-items-center fundoVerde fonte">
-        <form className="md:h-[55vh] md:w-[50vw] lg:h-[95vh] lg:w-[40vw] flex-col gap-4 form-container displayCounteiner bg-[#121D13]" onSubmit={cadastrarNovoUsuario}>
+        <form className="md:h-[500px] md:w-[50vw] lg:h-[95vh] lg:w-[40vw] flex-col gap-4 form-container displayCounteiner bg-[#121D13]" onSubmit={cadastrarNovoUsuario}>
           <img src={cadastro} alt="Tipografia Cadastrar" />
           <div className="flex flex-col w-full">
             <label htmlFor="nome" className="ml-[20px] text-white">Nome</label>
