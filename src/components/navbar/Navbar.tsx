@@ -25,7 +25,7 @@ function Navbar() {
 
   // if (usuario.token !== "") {
     navbarComponent = (
-      <div className=' mt-[10%] h-[580px] displayCounteiner-2 flex flex-col p-[2%] bg-[#121D13]'>
+      <div className=' mt-[10%] h-[85vh] displayCounteiner-2 flex flex-col p-[2%] bg-[#121D13]'>
 
         <div className='flex justify-center'>
           <Link to='/home' className='w-[80%]'><img src={Moara} alt="Logo e Tipografia Moara" /></Link> 

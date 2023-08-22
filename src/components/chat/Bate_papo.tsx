@@ -9,7 +9,7 @@ import tipografia from '../../assets/tipografia_bate-papo.png';
 
 function Bate_papo() {
     return (
-        <div className='mt-[10%] h-[580px]  displayCounteiner-2 flex flex-col p-[2%] bg-[#121D13]'>
+        <div className='mt-[10%] h-[85vh]  displayCounteiner-2 flex flex-col p-[2%] bg-[#121D13]'>
 
             <div className='flex justify-center'>
                 <img className='w-[90%]' src={tipografia} alt="Tipografia Bate-papo" />
