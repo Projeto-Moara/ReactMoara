@@ -14,8 +14,8 @@ function Footer() {
     footerComponent = (
       <>
         <div className="h-[200px]">
-          <div className="w-[95vw] flex-col form-container displayCounteiner-3 bg-[#121D13]">
-            <div className="container flex flex-col items-center py-4">
+          <div className="w-[93vw] flex-col form-container displayCounteiner-3 bg-[#121D13]">
+            <div className="container flex flex-col items-center">
               <p className='text-xl-1 font-bold uppercase bg-clip-text text-transparent bg-gradient-to-r from-[#FF7A00] to-[#ffc41f]'>Moara | Copyright: {data}</p>
               <p className='text-lg-1 text-white'>Acesse nossas redes sociais</p>
               <div className='flex gap-2'>

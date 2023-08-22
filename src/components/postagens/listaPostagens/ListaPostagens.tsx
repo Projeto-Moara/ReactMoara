@@ -63,7 +63,7 @@ function ListaPostagens() {
           wrapperClass="dna-wrapper mx-auto"
         />
       )}
-      <div className='mt-4 justify-center flex w-[70%] h-[95%] mx-auto my-1 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4'>
+      <div className='mt-[10%]'>
         {postagens.map((postagem) => (
           <CardPostagem key={postagem.id} post={postagem} curtir={curtir} />
         ))}
