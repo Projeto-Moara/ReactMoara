@@ -4,6 +4,13 @@
     align-items: center;
   }
 
+  .form-container2{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+
+  }
+
 .displayCounteiner{
     border-radius: 0 50px 50px 50px;
     box-shadow: 10px 0 10px 0 #000 ;
