@@ -78,7 +78,7 @@ function Navbar() {
             </div>
           </div>
 
-          <div className= 'mt-[2%] flex justify-around cursor-pointer m-[3%] items-center'>
+          <div className= 'mt-[6%] flex justify-around cursor-pointer m-[3%] items-center'>
             <img className='flex w-[40-px] h-[40px]' src={sair} alt="Foto de perfil do Usuario" />
             <Link to='' onClick={logout} className='text-[#72A9E3] ml-[5%] fonteSize'>Logout</Link>
           </div>
