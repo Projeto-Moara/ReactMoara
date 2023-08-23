@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useContext, useState } from 'react';
+import { ChangeEvent,  useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Postagem from '../../../models/Postagem';
 import Comentarios from '../../comentarios/Comentarios';
