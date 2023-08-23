@@ -78,6 +78,7 @@ function Bate_papo() {
                             <p className='text-white ml-[5%] fonteSize text-center '>Usuário</p>
                         </div>
                     </div>
+                    
 
                 </div>
             </div>

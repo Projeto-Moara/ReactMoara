@@ -9,7 +9,6 @@ import Cadastro from "../../pages/cadastro/Cadastro";
 import ListaTemas from "../temas/listaTemas/ListaTemas";
 import FormularioTema from "../temas/formularioTema/Formulariotema";
 import DeletarTema from "../temas/deletarTema/DeletarTema";
-import ListaPostagens from "../postagens/listaPostagens/ListaPostagens";
 import FormularioPostagem from "../postagens/formularioPostagem/FormularioPostagem";
 import DeletarPostagem from "../postagens/deletarPostagem/DeletarPostagem";
 import Perfil from "../../pages/perfil/Perfil";
@@ -39,8 +38,8 @@ export default function Manager() {
     } else {
         component = (
             <>
-                <div className="fundoVerde-2">
-                    <div className="mx-10 grid gap-12 grid-cols-12">
+                <div className="fundoVerde-2 ">
+                    <div className="mx-10 grid gap-12 grid-cols-12 ">
                         <div className='col-span-3'><Navbar /></div>
                         <div className='col-span-9'>
                             <div>
@@ -58,7 +57,7 @@ export default function Manager() {
                                     <Route path="/cadastroTema" element={<FormularioTema />} />
                                     <Route path="/editarTema/:id" element={<FormularioTema />} />
                                     <Route path="/deletarTema/:id" element={<DeletarTema />} />
-                                    <Route path="/postagens" element={<ListaPostagens />} />
+                                    <Route path="/postagens" element={<Home />} />
                                     <Route path="/cadastroPostagem" element={<FormularioPostagem />} />
                                     <Route path="/editarPostagem/:id" element={<FormularioPostagem />} />
                                     <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />

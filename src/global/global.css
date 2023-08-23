@@ -50,4 +50,10 @@
 .form-container-2 {
     display:flex;
     justify-content: center;
-  }
+}
+
+
+.custom-scrollbar{
+    margin-top: 4%;
+
+}

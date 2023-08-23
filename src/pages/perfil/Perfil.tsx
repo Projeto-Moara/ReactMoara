@@ -24,7 +24,7 @@ function Perfil() {
 
       <img src={usuario.foto} alt={`Foto de perfil de ${usuario.nome}`} className='object-cover rounded-full w-[200px] h-[200px] mx-auto mt-[-8rem] border-8 border-[#121D13] relative z-10' />
 
-      <div className="fonte relative mt-[-6rem] h-72 flex flex-col bg-[#213423] rounded-br-[50px] rounded-bl-[50px] text-white text-2xl items-center text-justify  justify-center">
+      <div className="fonte relative mt-[-6rem] h-72 flex flex-col bg-[#121D13] rounded-br-[50px] rounded-bl-[50px] text-white text-2xl items-center text-justify  justify-center">
         <p>Nome: {usuario.nome} </p>
         <p>Email: {usuario.usuario}</p>
       </div>
