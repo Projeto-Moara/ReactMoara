@@ -22,12 +22,14 @@ function CardPostagem({ post, curtir }: CardPostagemProps) {
   const [novoComentarioTexto, setNovoComentarioTexto] = useState('')
 
   // Função que vai pegar os novos comentários digitados e adiciona ao State
-  function criarNovoComentario(event: FormEvent) {
-    event.preventDefault()
-    setComentarios([...comentarios, novoComentarioTexto])
-    setNovoComentarioTexto('')
-  }
+  function criarNovoComentario(event: React.KeyboardEvent<HTMLElement>) {
 
+    if(event.key === 'Enter'){
+      setComentarios([...comentarios, novoComentarioTexto])
+      setNovoComentarioTexto('')
+    }
+
+  }
 
     // Função que pega o texto do novo comentário
     function atualizarNovoComentario(event: ChangeEvent<HTMLTextAreaElement>) {
@@ -91,16 +93,17 @@ function CardPostagem({ post, curtir }: CardPostagemProps) {
             </button>
             <div className='px-2'>{post.curtir}</div>
             <div className="flex w-[75%]">
-              <form onSubmit={criarNovoComentario} className=''>
+
                 <textarea
                   className="p-[8px] rounded-[40px] bg-[#121D13] border focus:border-white focus:bg-[#121D13]focus:outline-none text-white pl-[20px]"
                   name="comment"
                   placeholder="Comente aqui..."
                   value={novoComentarioTexto}
                   onChange={atualizarNovoComentario}
+                  onKeyDown={criarNovoComentario}
                   required
                 />
-              </form>
+
             </div>
             <div className="flex ">
             {usuario.id === post.usuario?.id ?
