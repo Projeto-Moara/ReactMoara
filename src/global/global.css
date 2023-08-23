@@ -46,3 +46,8 @@
     height: 100%;
     background-size: cover;
 }
+
+.form-container-2 {
+    display:flex;
+    justify-content: center;
+  }

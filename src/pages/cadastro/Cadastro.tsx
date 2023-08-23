@@ -138,11 +138,11 @@ function Cadastro() {
           </div>
           <div className="flex-colun">
             <div className='flex items-center'>
-              <button className="rounded-[50px] fonteSize px-[30px] bg-[#213423] text-white p-[10px] flex justify-center displayCounteiner" type='submit'>
+              <button className="rounded-[50px] fonteSize px-[30px] bg-[#213423] text-white p-[10px] flex justify-center displayCounteiner hover:bg-[#314d34]" type='submit'>
               Cadastrar
              </button>
             </div>
-            <div className='flex justify-center cursor-pointer m-[10%]' onClick={back}>
+            <div className='flex justify-center cursor-pointer m-[10%] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-30 hover:no-underline' onClick={back}>
               <img src={voltarIMG} alt="Icone de voltar" className=' w-[25%] h-[25%]' />
               <button className='text-[#72A9E3] ml-[5%] fonteSize'>
               Voltar

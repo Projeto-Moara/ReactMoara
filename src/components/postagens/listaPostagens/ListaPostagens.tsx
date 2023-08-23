@@ -63,7 +63,7 @@ function ListaPostagens() {
           wrapperClass="dna-wrapper mx-auto"
         />
       )}
-      <div className='mt-[10%]'>
+      <div className='mt-[4%]'>
         {postagens.map((postagem) => (
           <CardPostagem key={postagem.id} post={postagem} curtir={curtir} />
         ))}
