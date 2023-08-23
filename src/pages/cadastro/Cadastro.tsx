@@ -74,7 +74,7 @@ function Cadastro() {
   return (
     <>
       <div className="grid place-items-center fundoVerde fonte">
-        <form className="md:h-[55vh] md:w-[50vw] lg:h-[95vh] lg:w-[40vw] flex-col gap-4 form-container displayCounteiner bg-[#121D13]" onSubmit={cadastrarNovoUsuario}>
+        <form className="md:h-[500px] md:w-[50vw] lg:h-[95vh] lg:w-[40vw] flex-col gap-4 form-container displayCounteiner bg-[#121D13]" onSubmit={cadastrarNovoUsuario}>
           <img src={cadastro} alt="Tipografia Cadastrar" />
           <div className="flex flex-col w-full">
             <label htmlFor="nome" className="ml-[20px] text-white">Nome</label>
@@ -138,12 +138,11 @@ function Cadastro() {
           </div>
           <div className="flex-colun">
             <div className='flex items-center'>
-              <button className="rounded-[50px] fonteSize px-[30px] bg-[#213423] hover:bg-[#314d34] text-white p-[10px] flex justify-center displayCounteiner" type='submit'>
+              <button className="rounded-[50px] fonteSize px-[30px] bg-[#213423] text-white p-[10px] flex justify-center displayCounteiner hover:bg-[#314d34]" type='submit'>
               Cadastrar
              </button>
             </div>
-
-            <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer text-[#72A9E3] fonteSize hover:no-underline flex justify-center cursor-pointer m-[10%]' onClick={back}>
+            <div className='flex justify-center cursor-pointer m-[10%] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-30 hover:no-underline' onClick={back}>
               <img src={voltarIMG} alt="Icone de voltar" className=' w-[25%] h-[25%]' />
               <button className='text-[#72A9E3] ml-[5%] fonteSize'>
               Voltar

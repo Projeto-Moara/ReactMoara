@@ -6,6 +6,7 @@ import Postagem from '../../../models/Postagem';
 import { atualizar, buscar } from '../../../services/Service';
 import CardPostagem from '../cardPostagem/CardPostagem';
 import { toastAlerta } from '../../../util/toastAlerta';
+import '../../../global/global.css'
 
 function ListaPostagens() {
   const [postagens, setPostagens] = useState<Postagem[]>([]);
@@ -63,7 +64,7 @@ function ListaPostagens() {
           wrapperClass="dna-wrapper mx-auto"
         />
       )}
-      <div className='container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+      <div className='h-[100vh] overflow-y-scroll scrollbar scrollbar-thumb-[#121D13] scrollbar-thumb-rounded scrollbar-w-[10px] custom-scrollbar ml-[7%]'>
         {postagens.map((postagem) => (
           <CardPostagem key={postagem.id} post={postagem} curtir={curtir} />
         ))}

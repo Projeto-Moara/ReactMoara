@@ -67,7 +67,9 @@ function Login() {
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
-          <button type="submit" className="rounded-[50px] fonteSize px-[30px] bg-[#213423] hover:bg-[#314d34] text-white p-[10px] flex justify-center displayCounteiner">
+
+          <button type="submit" className="rounded-[50px] fonteSize px-[30px] bg-[#213423] text-white p-[10px] flex justify-center displayCounteiner hover:bg-[#314d34]">
+
             {isLoading ? (
               <RotatingLines
                 strokeColor="white"
@@ -80,7 +82,7 @@ function Login() {
               <span>Entrar</span>
             )}
           </button>
-          <Link to="/cadastro" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer text-[#72A9E3] fonteSize hover:no-underline">
+          <Link to="/cadastro" className="fonteSize transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer text-[#72A9E3] fonteSize hover:no-underline">
               Cadastre-se
           </Link>
         </form>
