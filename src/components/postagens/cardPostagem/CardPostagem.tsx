@@ -35,10 +35,10 @@ function CardPostagem({ post, curtir }: CardPostagemProps) {
 
   return (
 
-    <div className='fonte'>
+    <div className='fonte bg-[#121D13] text-gray-200 displayCounteiner-2 gap-4 w-[100%] h-[100%] p-5'>
       <div className="">
-        <header className="flex">
-          <div>
+        <header className="flex p-5">
+          <div className=''>
             <div>
               <img src={post.usuario?.foto} alt="user name" title="user name" className=" w-[50px] h-[50px] rounded-[50px]" />
             </div>
@@ -76,14 +76,14 @@ function CardPostagem({ post, curtir }: CardPostagemProps) {
           {usuario.id === post.usuario?.id ?
             <>
               <Link to={`/editarPostagem/${post.id}`}>
-                <button className='rounded outline w-[100px] text-slate-100 bg-gradient-to-r from-green-500 to-blue-600 hover:from-blue-400 hover:to-green-400 flex items-center justify-center mt-2.5 mr-1'>Editar</button>
+                <button className='w-[85%] h-[50px] rounded-[50px] fonteSize px-[30px] bg-[#213423] text-white p-[10px] flex justify-center cursor-pointer m-[3%] items-center'>Editar</button>
               </Link>
               <Link to={`/deletarPostagem/${post.id}`}>
-                <button className="rounded outline w-[100px] text-slate-100 bg-gradient-to-r from-[#FF7A00] to-[#ff1f1f] hover:from-[#FF7A00] hover:to-[#ffc41f] flex items-center justify-center mt-2.5 mr-1">Deletar</button>
+                <button className="w-[85%] h-[50px] rounded-[50px] fonteSize px-[30px] bg-[#213423] text-white p-[10px] flex justify-center cursor-pointer m-[3%] items-center">Deletar</button>
               </Link>
             </>
 
-            : 
+            :
 
             <></>
           }
